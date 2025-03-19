@@ -40,9 +40,29 @@ import Logo from "../assets/logo.png";
     justify-content: space-between;
     align-items: center;
     background-color: #fff;
-    padding: 0 70px;
+    padding: 20px 70px;
     position: fixed;
     width: calc(100% - 140px);
-    height: 170px;
+    height: 150px;
+
+    transition:
+      height 0.3s ease,
+      transform 0.3s ease;
+  }
+  .scroll {
+    box-shadow: 0 0 30px 10px hsla(0, 0%, 60%, 0.2);
+    background-color: #fff;
+    height: 90px;
   }
 </style>
+
+<script>
+  window.addEventListener("scroll", () => {
+    const header = document.querySelector(".header-style");
+    if (window.scrollY > 0) {
+      header!.classList.add("scroll");
+    } else {
+      header!.classList.remove("scroll");
+    }
+  });
+</script>
