@@ -1,0 +1,48 @@
+---
+import { Image } from "astro:assets";
+import Logo from "../assets/logo.png";
+---
+
+<div id="container">
+  <header class="header-style">
+    <div class="logo">
+      <Image src={Logo} alt="Logo" />
+    </div>
+    <nav class="menuBar">
+      <ul class="display-flex subText">
+        <li>預約體驗</li>
+        <li>服務項目</li>
+      </ul>
+    </nav>
+  </header>
+</div>
+
+<style>
+  .mainText {
+    color: #6d4a2f;
+  }
+  .subText {
+    color: #c3a76c;
+    font-size: 1.125rem;
+  }
+  ul {
+    list-style-type: none;
+    margin: auto;
+    li:nth-child(1) {
+      margin-right: 3.3vw;
+    }
+  }
+  .display-flex {
+    display: flex;
+  }
+  .header-style {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    padding: 0 70px;
+    position: fixed;
+    width: calc(100% - 140px);
+    height: 170px;
+  }
+</style>
