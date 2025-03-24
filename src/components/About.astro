@@ -1,0 +1,161 @@
+---
+import { Image } from "astro:assets";
+import star from "../assets/star.png";
+import icon1 from "../assets/icon01.png";
+import icon2 from "../assets/icon02.png";
+import icon3 from "../assets/icon03.png";
+---
+
+<div class="about mainColor">
+  <div class="container">
+    <div>
+      <div class="section-title">
+        <div class="f65-36">About</div>
+        <span class="subColor f30-25">關於我們</span>
+        <Image src={star} alt="star" class="star" />
+      </div>
+      <p class="txt">
+        想到「家」想到了什麼 <br /> 看似簡單的問題卻讓人琢磨許久 <br /> 對每個人來說一定都非常不同
+        <br /> 有些人覺得是避風港，有些人覺得是歸屬感 <br /> 有些人覺得是壓力，有些人覺得是愛
+        <br /> 這些情感可能複雜，但對大多數人來說 <br /> 情緒都是很滿的吧！ <br
+        /><br /> Home Spa希望能用我們的詮釋帶出我們心中對家的感覺，讓大家來這可以感受屬於自己的溫暖，一個自己的隱形避難所，就在2020年全球環境遭受巨大改變之時，「家」Home
+        Spa誕生了，讓身心疲乏，無助徬徨的妳享受最安心、最放心的環境，有妳才有「家」。
+      </p>
+    </div>
+    <ul class="about-image-wrapper">
+      <li class="about-wrapper">
+        <div class="about-content">
+          <div class="about-img">
+            <Image src={icon1} alt="icon" />
+          </div>
+          <div class="about-line"></div>
+          <div class="about-info">誠信</div>
+        </div>
+      </li>
+      <li class="about-wrapper">
+        <div class="about-content">
+          <div class="about-img">
+            <Image src={icon2} alt="icon" />
+          </div>
+          <div class="about-line"></div>
+          <div class="about-info">專業</div>
+        </div>
+      </li>
+      <li class="about-wrapper">
+        <div class="about-content">
+          <div class="about-img">
+            <Image src={icon3} alt="icon" />
+          </div>
+          <div class="about-line"></div>
+          <div class="about-info">安心</div>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<style>
+  .about {
+    position: absolute;
+    top: 65%;
+    background: linear-gradient(180deg, #faf5f0, #fff);
+    width: 100%;
+    padding-top: 60px;
+  }
+  .star {
+    width: 29px;
+    height: 29px;
+    align-self: flex-start;
+  }
+  .container {
+    display: flex;
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    position: relative;
+    > div {
+      width: 55%;
+    }
+    > ul {
+      width: 45%;
+    }
+  }
+
+  .section-title {
+    margin-bottom: 30px;
+    display: flex;
+    align-items: baseline;
+  }
+  .f65-36 {
+    margin-right: 10px;
+    font-size: 4.0625rem;
+  }
+  .f30-25 {
+    font-size: 1.875rem;
+  }
+  .txt {
+    width: 100%;
+    font-size: 1.125rem;
+    line-height: 1.8;
+  }
+  .mainColor {
+    color: #6d4a2f;
+  }
+  .subColor {
+    color: #c3a76c;
+  }
+  .about-image-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    top: -130px;
+  }
+  .about-image-wrapper li:nth-child(2) {
+    margin-left: 40px;
+    margin-top: 80px;
+  }
+  .about-image-wrapper li:nth-child(3) {
+    margin-top: -40px;
+    margin-left: 30px;
+  }
+
+  .about-wrapper {
+    width: 200px;
+    height: 266px;
+    border-radius: 120px;
+    box-shadow: 0 0 27px 0 rgba(66, 42, 23, 0.1);
+    background-color: #fff;
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .about-line {
+    width: 80%;
+    height: 1px;
+    background-color: #6d4a2f;
+    margin: 15px auto 20px;
+    position: relative;
+    &::after {
+      content: "";
+      width: 20px;
+      height: 13px;
+      background: url("src/assets/diamond.png") 50%/ 12px no-repeat;
+      position: absolute;
+      left: 50%;
+      top: -6px;
+      transform: translateX(-50%);
+      background-color: #fff;
+    }
+  }
+  .about-content {
+    width: 100%;
+    height: 256px;
+    border: 1px solid #6d4a2f;
+    border-radius: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+</style>

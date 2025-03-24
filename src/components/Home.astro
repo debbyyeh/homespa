@@ -1,6 +1,8 @@
 ---
 import { Image } from "astro:assets";
 import Logo from "../assets/logo.png";
+import Banner from "./Banner.astro";
+import About from "./About.astro";
 ---
 
 <div id="container">
@@ -15,6 +17,8 @@ import Logo from "../assets/logo.png";
       </ul>
     </nav>
   </header>
+  <Banner />
+  <About />
 </div>
 
 <style>
@@ -36,6 +40,8 @@ import Logo from "../assets/logo.png";
     display: flex;
   }
   .header-style {
+    z-index: 999;
+
     display: flex;
     justify-content: space-between;
     align-items: center;
