@@ -1,0 +1,57 @@
+---
+import { Image } from "astro:assets";
+import star from "../assets/star.png";
+---
+
+<div class="reservation mainColor">
+  <div class="reservation-wrapper">
+    <div>
+      <div class="section-title reservation-title">
+        <div class="f65-36">Reservation</div>
+        <span class="subColor f30-25">預約服務</span>
+        <Image src={star} alt="star" class="star" />
+      </div>
+      <div class="f24-20">邀您一同踏上舒壓的旅程</div>
+    </div>
+    <div class="reservation-link">
+      <a href="/reservation" class="reservation-btn"></a>
+    </div>
+  </div>
+</div>
+<style>
+  .reservation {
+    position: absolute;
+    width: 100%;
+    top: 320%;
+    background: url("/src/assets/contact.jpg") 50% center / cover no-repeat;
+    height: 420px;
+  }
+  .reservation-wrapper {
+    padding-top: 140px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+  }
+  .reservation-title {
+    justify-content: flex-start;
+  }
+  .reservation-link {
+    width: 98px;
+    height: 98px;
+  }
+  .reservation-btn {
+    width: 100%;
+    height: 100%;
+    display: block;
+    background: url("/src/assets/reservation/arrow.png") center / contain
+      no-repeat;
+  }
+  .reservation-btn:hover {
+    background: url("/src/assets/reservation/arrow_hover.png") center / contain
+      no-repeat;
+    transition: 0.4s ease;
+  }
+</style>
