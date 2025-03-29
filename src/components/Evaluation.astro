@@ -1,0 +1,158 @@
+---
+import { Image } from "astro:assets";
+import star from "../assets/star.png";
+import customer from "../assets/evaluation/avatar.png";
+---
+
+<div class="evalution mainColor">
+  <div class="section-title evalution-title">
+    <div class="f65-36">Evaluation</div>
+    <span class="subColor f30-25">客戶評價</span>
+    <Image src={star} alt="star" class="star" />
+  </div>
+  <div class="container">
+    <ul class="rank-container">
+      <li class="rank-wrapper">
+        <div class="customer">
+          <Image src={customer} alt="customer" class="customer-img" />
+        </div>
+        <div class="content">
+          很喜歡這邊的環境～～體驗過臉部療程、身體按摩跟指甲光療都很喜歡！不會強迫推銷，讓人可以很安心的問各種皮膚問題
+          👍👍
+        </div>
+        <div class="rank f65-36">01</div>
+        <div class="stars">
+          <div class="customer-star"></div>
+          <div class="customer-star"></div>
+          <div class="customer-star"></div>
+          <div class="customer-star"></div>
+          <div class="customer-star"></div>
+        </div>
+      </li>
+      <li class="rank-wrapper">
+        <div class="customer">
+          <Image src={customer} alt="customer" class="customer-img" />
+        </div>
+        <div class="content">
+          環境像家一樣溫暖，美容師像朋友一樣好聊天完全無壓力，手法溫柔專業，放鬆舒適值得推薦！
+        </div>
+        <div class="rank f65-36">02</div>
+        <div class="stars">
+          <div class="customer-star"></div>
+          <div class="customer-star"></div>
+          <div class="customer-star"></div>
+          <div class="customer-star"></div>
+          <div class="customer-star"></div>
+        </div>
+      </li>
+      <li class="rank-wrapper">
+        <div class="customer">
+          <Image src={customer} alt="customer" class="customer-img" />
+        </div>
+        <div class="content">
+          真心很愛這邊的環境，也很喜歡親切溫柔的昱琇，也不會一直推銷療程跟商品，這裡真的是放鬆身心靈好地方～～～按摩完看看窗外就覺得一切都這麼美好啊～～～
+        </div>
+        <div class="rank f65-36">03</div>
+        <div class="stars">
+          <div class="customer-star"></div>
+          <div class="customer-star"></div>
+          <div class="customer-star"></div>
+          <div class="customer-star"></div>
+          <div class="customer-star"></div>
+        </div>
+      </li>
+      <li class="rank-wrapper">
+        <div class="customer">
+          <Image src={customer} alt="customer" class="customer-img" />
+        </div>
+        <div class="content">
+          環境溫暖舒適，昱秀細心的服務和優秀的技術令人安心，每個月都要來紓解一下壓力，這一次做完馬上就會想約下一次了。
+        </div>
+        <div class="rank f65-36">04</div>
+        <div class="stars">
+          <div class="customer-star"></div>
+          <div class="customer-star"></div>
+          <div class="customer-star"></div>
+          <div class="customer-star"></div>
+          <div class="customer-star"></div>
+        </div>
+      </li>
+    </ul>
+  </div>
+
+  <style>
+    .evalution-title {
+      justify-content: flex-start;
+      width: 90%;
+      max-width: 1200px;
+      margin: auto;
+    }
+    .evalution {
+      position: absolute;
+      top: 250%;
+      width: 100%;
+      padding-top: 60px;
+    }
+    .container {
+      display: flex;
+      width: 90%;
+      max-width: 1200px;
+      margin: auto;
+    }
+    .rank-container {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      width: 100%;
+    }
+    .rank-wrapper {
+      width: 49%;
+      background-color: rgb(250, 245, 240);
+      position: relative;
+      padding: 55px 36px 35px;
+      margin-top: 5%;
+    }
+    .customer {
+      border-radius: 50%;
+      background-color: rgb(239, 230, 222);
+      width: 105px;
+      height: 105px;
+      position: absolute;
+      top: -30px;
+      left: 8%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: 2px solid rgb(255, 255, 255);
+    }
+    .customer-img {
+      width: 71px;
+      height: 71px;
+    }
+    .stars {
+      position: absolute;
+      top: 50px;
+      right: 6%;
+      display: flex;
+    }
+    .customer-star {
+      margin-right: 5px;
+    }
+    .rank {
+      color: rgb(200, 200, 200);
+      position: absolute;
+      top: -40px;
+      right: 4%;
+    }
+    .content {
+      letter-spacing: 0.07rem;
+      line-height: 1.8;
+      margin-top: 50px;
+    }
+    .customer-star {
+      width: 21px;
+      height: 20px;
+      background: url("../assets//evaluation/rank.png") no-repeat;
+    }
+  </style>
+</div>
