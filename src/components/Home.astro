@@ -3,6 +3,7 @@ import { Image } from "astro:assets";
 import Logo from "../assets/logo.png";
 import Banner from "./Banner.astro";
 import About from "./About.astro";
+import Service from "./Service.astro";
 ---
 
 <div id="container">
@@ -19,19 +20,15 @@ import About from "./About.astro";
   </header>
   <Banner />
   <About />
+  <Service />
 </div>
 
 <style>
-  .mainColor {
-    color: #6d4a2f;
-  }
   .subText {
     color: #c3a76c;
     font-size: 1.125rem;
   }
   ul {
-    list-style-type: none;
-    margin: auto;
     li:nth-child(1) {
       margin-right: 3.3vw;
     }

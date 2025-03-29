@@ -1,0 +1,125 @@
+---
+import { Image } from "astro:assets";
+import star from "../assets/star.png";
+
+import service01 from "../assets/service/image01.jpg";
+import service02 from "../assets/service/image02.jpg";
+import service03 from "../assets/service/image03.jpg";
+import service04 from "../assets/service/image04.jpg";
+import service05 from "../assets/service/image05.jpg";
+import service06 from "../assets/service/image06.jpg";
+
+const serviceInfo = [
+  { pic: service01, title: "臉部保養" },
+  { pic: service02, title: "身體保養" },
+  { pic: service03, title: "脫毛處理" },
+  { pic: service04, title: "美睫" },
+  { pic: service05, title: "手足保養（美甲）" },
+  { pic: service06, title: "紋繡" },
+];
+---
+
+<div class="service mainColor">
+  <div class="container">
+    <div class="section-title">
+      <div class="f65-36">Services</div>
+      <span class="subColor f30-25">服務項目</span>
+      <Image src={star} alt="star" class="star" />
+    </div>
+    <ul class="service-container">
+      {
+        serviceInfo.map((item, index) => {
+          return (
+            <li class="service-wrapper">
+              <img src={item.pic.src} alt={item.pic.src} class="image" />
+              <div class="service-more">
+                <div class="service-info f26-20">{item.title}</div>
+                <a href="#" class="more f18 subColor">
+                  MORE
+                </a>
+              </div>
+            </li>
+          );
+        })
+      }
+    </ul>
+  </div>
+</div>
+
+<style>
+  .service-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .service-container li {
+    width: 33%;
+    position: relative;
+  }
+  .image {
+    width: 100%;
+    height: fit-content;
+  }
+  .service-wrapper {
+    position: relative;
+    &::after {
+      content: "";
+      width: 100%;
+      height: 99%;
+      background: linear-gradient(0deg, #170e0b, hsla(0, 0%, 100%, 0) 70%);
+      position: absolute;
+      top: 0;
+      left: 0;
+      opacity: 0;
+      transition: opacity 0.4s ease-out;
+    }
+    &:hover::after {
+      opacity: 1;
+    }
+  }
+
+  .service-wrapper:hover {
+    cursor: pointer;
+  }
+  .service-wrapper:hover .more::after {
+    width: 150px;
+  }
+  .service-more {
+    text-align: center;
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+  }
+  .service-info {
+    color: #fff;
+    margin-bottom: 40px;
+  }
+  .service {
+    position: absolute;
+    top: 130%;
+    width: 100%;
+    padding-top: 60px;
+  }
+  .more {
+    position: relative;
+    &::after {
+      content: "";
+      width: 91px;
+      height: 1px;
+      background-color: #c3a76c;
+      position: absolute;
+      left: 50%;
+      bottom: -5px;
+      transform: translateX(-50%);
+      transition: width 0.4s ease;
+    }
+  }
+  .section-title {
+    margin-bottom: 30px;
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+  }
+</style>

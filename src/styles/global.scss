@@ -1,14 +1,4 @@
----
-import Home from "../components/Home.astro";
-import Layout from "../layouts/Layout.astro";
----
-
-<Layout>
-  <Home />
-</Layout>
-
-<style is:global>
-  body {
+body {
     margin: 0;
     width: 100%;
     height: 100%;
@@ -18,49 +8,48 @@ import Layout from "../layouts/Layout.astro";
       Gilda Display,
       Noto Sans TC,
       sans-serif;
-  }
-  a {
+    a {
     text-decoration: none;
-  }
-  ul {
+    }
+    ul {
     list-style-type: none;
     margin: auto;
-  }
+    }
+}
 
-  *,
-  *::before,
-  *::after {
+*,
+    *::before,
+    *::after {
     box-sizing: border-box;
-  }
+}
 
-  .star {
+.star {
     width: 29px;
     height: 29px;
     align-self: flex-start;
-  }
-  .section-title {
+}
+.section-title {
     margin-bottom: 30px;
     display: flex;
     align-items: baseline;
     justify-content: center;
-  }
-  .f65-36 {
+}
+.f65-36 {
     margin-right: 10px;
     font-size: 4.0625rem;
-  }
-  .f30-25 {
-    font-size: 1.875rem;
-  }
-  .f26-20 {
+}
+.f30-25 {
+    font-size: 1.875rem;    
+}
+.f26-20 {
     font-size: 1.625rem;
-  }
-  .f18 {
+}
+.f18 {
     font-size: 1.125rem;
-  }
-  .mainColor {
+}
+.mainColor {
     color: #6d4a2f;
-  }
-  .subColor {
+}
+.subColor {
     color: #c3a76c;
-  }
-</style>
+}
